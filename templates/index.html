@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🌸 Iris Flower Prediction</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  background: linear-gradient(135deg,#f6d365 0%, #b530cf 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.container {
+  max-width: 800px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+.categories {
+  margin-top: 20px;
+}
+.categories ul {
+  list-style: none;
+  padding-left: 0;
+}
+.categories li {
+  background: #e9ecef;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.result {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🌸 Iris Flower Classifier 🌸</h1>
+
+  <form method="post">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="number" step="any" class="form-control" name="sepal_length" placeholder="Sepal Length" required>
+      </div>
+      <div class="col-md-6">
+        <input type="number" step="any" class="form-control" name="sepal_width" placeholder="Sepal Width" required>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input type="number" step="any" class="form-control" name="petal_length" placeholder="Petal Length" required>
+      </div>
+      <div class="col-md-6">
+        <input type="number" step="any" class="form-control" name="petal_width" placeholder="Petal Width" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Predict</button>
+  </form>
+
+  {% if prediction %}
+  <div class="alert alert-success result">
+    🌼 <strong>Prediction:</strong> {{ prediction }}
+  </div>
+  {% endif %}
+
+  <div class="categories">
+    <h4 class="text-center">🌟 Possible Categories 🌟</h4>
+    <ul>
+      <li>Iris-setosa</li>
+      <li>Iris-versicolor</li>
+      <li>Iris-virginica</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
