@@ -5,8 +5,6 @@
 This project is a **web application** that predicts the species of an Iris flower based on its sepal and petal measurements.
 It uses a **Decision Tree Classifier** trained on the classic Iris dataset and provides a **full-screen, user-friendly Flask GUI**.
 
-### 🌐 Live App on Render: https://iris-flower-classification-ojv9.onrender.com
-
 ## 🌟 Features :-
 
 - ✅ Trained **Decision Tree** model
